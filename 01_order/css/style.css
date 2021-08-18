@@ -53,7 +53,7 @@ body {
 .card {
 	position: relative;
 	width: 450px;
-	height: 700px;
+	height: 680px;
 	border-radius: 20px;
 	overflow: hidden;
 	background: #fff;
@@ -62,7 +62,7 @@ body {
 @media (max-width: 576px) {
 	.card {
 		width: 375px;
-		height: 620px;
+		height: 610px;
 	}
 }
 
