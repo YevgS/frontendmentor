@@ -1,0 +1,164 @@
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+:root {
+	/* Primary */
+
+	// main background
+
+	--var-veryDarkBlue: hsl(233, 47%, 7%);
+	// card background
+	--var-darkDesaturatedBlue: hsl(244, 38%, 16%);
+	// accent
+	--var-softViolet: hsl(277, 64%, 61%);
+
+	/* Nuetral */
+
+	// main heading, stats
+	--var-white: hsl(0, 0%, 100%);
+	// main paragraph
+	--var-slightlyTransparentWhiteMain: hsla(0, 0%, 100%, 0.75);
+	// stat headings
+	--var-slightlyTransparentWhite: hsla(0, 0%, 100%, 0.6);
+
+	// Width
+	--mobile: 375px;
+	--desktop: 1440px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+// -------------------------------------------------------
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+
+	font-size: 15px;
+	font-family: "Lexend Deca", sans-serif;
+	// font-family: "Inter", sans-serif;
+	background-color: var(--var-veryDarkBlue);
+	color: var(--var-white);
+}
+
+main {
+	min-height: 100%;
+	display: grid;
+	place-items: center;
+	margin: 30px 0;
+}
+
+.container {
+	background: var(--var-darkDesaturatedBlue);
+	width: 325px;
+	border-radius: 10px;
+	overflow: hidden;
+	// margin: 0 auto;
+}
+
+.header__image {
+	position: relative;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--var-softViolet);
+	opacity: 0.4;
+}
+
+img {
+	filter: contrast(130%) saturate(40%) brightness(0.7);
+}
+
+// -----------------------------------------------------
+
+.card__text {
+	text-align: center;
+	padding: 40px 30px 10px 30px;
+}
+
+h2 {
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
+	margin-bottom: 20px;
+	span {
+		color: var(--var-softViolet);
+	}
+}
+
+.text__main {
+	line-height: 1.6;
+	margin-bottom: 25px;
+	color: var(--var-slightlyTransparentWhiteMain);
+}
+
+.stat__title {
+	font-family: "Inter", sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+.stat {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 1px;
+	color: var(--var-slightlyTransparentWhite);
+}
+
+// ------------------------------------------------------
+
+@media (min-width: 1200px) {
+	h2 {
+		font-size: 36px;
+	}
+	main {
+		margin: 0;
+	}
+
+	.container {
+		width: 1140px;
+	}
+
+	.header__image {
+		float: right;
+		width: 48%;
+	}
+
+	.card__text {
+		text-align: left;
+		padding: 60px 120px 0px 60px;
+		width: 570px;
+	}
+
+	.text__main {
+		margin-bottom: 60px;
+	}
+
+	.stat__items {
+		display: flex;
+		justify-content: space-between;
+	}
+}

@@ -86,7 +86,7 @@ body {
 .content__title {
 	margin-bottom: 20px;
 	font-weight: 900;
-	font-size: 25px;
+	font-size: 27px;
 	color: var(--darkBblue);
 }
 
@@ -156,6 +156,7 @@ body {
 
 .price__change:hover a {
 	opacity: 0.8;
+	text-decoration: none;
 }
 
 /* ----------------------------- */
