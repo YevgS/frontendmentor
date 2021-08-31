@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 :root {
   /* Primary */
-  --var-darkCyan: hsl(185, 75%, 39%);
-  --var-veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
-  --var-DarkGrayishBlue: hsl(227, 10%, 46%);
+  --clr-darkCyan: hsl(185, 75%, 39%);
+  --clr-veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --clr-DarkGrayishBlue: hsl(227, 10%, 46%);
   /* Nuetral */
-  --var-darkGray: hsl(0, 0%, 59%);
+  --clr-darkGray: hsl(0, 0%, 59%);
   --mobile: 375px;
   --desktop: 1440px;
 }
@@ -33,7 +33,7 @@ body {
   min-width: 100%;
   font-size: 18px;
   font-family: "Kumbh Sans", sans-serif;
-  color: var(--var-veryDarkDesaturatedBlue);
+  color: var(--clr-veryDarkDesaturatedBlue);
   background-color: #f0f0f0;
   display: -ms-grid;
   display: grid;
@@ -46,7 +46,7 @@ main {
   width: 100%;
   height: 410px;
   padding: 45px 25px;
-  background-color: var(--var-darkCyan);
+  background-color: var(--clr-darkCyan);
   overflow: hidden;
   display: -ms-grid;
   display: grid;
@@ -76,6 +76,8 @@ main .bcg-bottom {
   z-index: 1;
   border-radius: 10px;
   overflow: hidden;
+  -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
 .card__pattern {
@@ -114,7 +116,7 @@ main .bcg-bottom {
 }
 
 .profile__info span {
-  color: var(--var-DarkGrayishBlue);
+  color: var(--clr-DarkGrayishBlue);
   font-size: 10px;
 }
 

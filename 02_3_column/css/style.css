@@ -4,16 +4,16 @@
 :root {
 	/* Primary */
 
-	--var-brightOrange: hsl(31, 77%, 52%);
-	--var-darkCyan: hsl(184, 100%, 22%);
-	--var-veryDarkCyan: hsl(179, 100%, 13%);
+	--clr-brightOrange: hsl(31, 77%, 52%);
+	--clr-darkCyan: hsl(184, 100%, 22%);
+	--clr-veryDarkCyan: hsl(179, 100%, 13%);
 
 	/* Nuetral */
 
 	/* paragraphs */
-	--var-transparentWhite: hsla(0, 0%, 100%, 0.75);
+	--clr-transparentWhite: hsla(0, 0%, 100%, 0.75);
 	/* background, headings, buttons */
-	--var-veryLightGray: hsl(0, 0%, 95%);
+	--clr-veryLightGray: hsl(0, 0%, 95%);
 
 	--mobile: 375px;
 	--desktop: 1440px;
@@ -34,7 +34,7 @@
 h2 {
 	font-family: "Big Shoulders Display", cursive;
 	font-size: 60px;
-	color: var(--var-veryLightGray);
+	color: var(--clr-veryLightGray);
 	margin-bottom: 40px;
 	text-transform: uppercase;
 }
@@ -59,7 +59,7 @@ body {
 	margin: 0 auto;
 	display: grid;
 	place-items: center;
-	background-color: var(--var-veryLightGray);
+	background-color: var(--clr-veryLightGray);
 }
 
 .cards {
@@ -74,19 +74,19 @@ body {
 }
 
 .card__1 {
-	background-color: var(--var-brightOrange);
+	background-color: var(--clr-brightOrange);
 	border-radius: 10px 0 0 10px;
 }
 .card__2 {
-	background-color: var(--var-darkCyan);
+	background-color: var(--clr-darkCyan);
 }
 .card__3 {
-	background-color: var(--var-veryDarkCyan);
+	background-color: var(--clr-veryDarkCyan);
 	border-radius: 0 10px 10px 0;
 }
 
 p {
-	color: var(--var-transparentWhite);
+	color: var(--clr-transparentWhite);
 	margin-bottom: 90px;
 	line-height: 1.6;
 }
@@ -95,36 +95,36 @@ p {
 	display: inline-block;
 	padding: 10px 25px;
 	border-radius: 30px;
-	background-color: var(--var-veryLightGray);
-	border: 2px solid var(--var-veryLightGray);
+	background-color: var(--clr-veryLightGray);
+	border: 2px solid var(--clr-veryLightGray);
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
 .btn:hover {
-	color: var(--var-veryLightGray);
+	color: var(--clr-veryLightGray);
 }
 
 /* -------------------------------- */
 
 .btn__1 {
-	color: var(--var-brightOrange);
+	color: var(--clr-brightOrange);
 }
 .btn__1:hover {
-	background-color: var(--var-brightOrange);
+	background-color: var(--clr-brightOrange);
 }
 
 .btn__2 {
-	color: var(--var-darkCyan);
+	color: var(--clr-darkCyan);
 }
 .btn__2:hover {
-	background-color: var(--var-darkCyan);
+	background-color: var(--clr-darkCyan);
 }
 
 .btn__3 {
-	color: var(--var-darkCyan);
+	color: var(--clr-darkCyan);
 }
 .btn__3:hover {
-	background-color: var(--var-v);
+	background-color: var(--clr-v);
 }
 
 /* -------------------------------- */
