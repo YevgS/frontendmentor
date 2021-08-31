@@ -74,22 +74,28 @@ main {
 }
 
 .header__image {
-	position: relative;
-}
-
-.overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	// position: relative;
 	background: var(--var-softViolet);
-	opacity: 0.4;
 }
 
 img {
-	filter: contrast(130%) saturate(40%) brightness(0.7);
+	opacity: 0.8;
+	mix-blend-mode: multiply;
 }
+
+// .overlay {
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	background: var(--var-softViolet);
+// 	opacity: 0.4;
+// }
+
+// img {
+// 	filter: contrast(130%) saturate(40%) brightness(0.7);
+// }
 
 // -----------------------------------------------------
 

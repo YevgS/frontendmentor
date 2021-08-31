@@ -3,7 +3,7 @@
 	/* Primary */
 	--var-paleBlue: hsl(225, 100%, 94%);
 	--var-brightBlue: hsl(245, 75%, 52%);
-	/* --var-brightBlue: hsl(245, 77%, 60%); */
+	--var-brightBlueH: hsl(245, 77%, 60%);
 
 	/* Nuetral */
 	--veryPaleBlue: hsl(225, 100%, 98%);
@@ -177,7 +177,7 @@ body {
 }
 
 .card__payment:hover {
-	background-color: hsl(245, 77%, 60%);
+	background-color: var(--var-brightBlueH);
 }
 
 .card__cancel {

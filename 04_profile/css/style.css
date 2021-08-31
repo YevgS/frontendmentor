@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  /* Primary */
+  --var-darkCyan: hsl(185, 75%, 39%);
+  --var-veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --var-DarkGrayishBlue: hsl(227, 10%, 46%);
+  /* Nuetral */
+  --var-darkGray: hsl(0, 0%, 59%);
+  --mobile: 375px;
+  --desktop: 1440px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  height: 100vh;
+  min-width: 100%;
+  font-size: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+  color: var(--var-veryDarkDesaturatedBlue);
+  background-color: #f0f0f0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  height: 410px;
+  padding: 45px 25px;
+  background-color: var(--var-darkCyan);
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+}
+
+main .bcg-top {
+  position: absolute;
+  top: -115%;
+  left: -35%;
+  -webkit-transform: scale(67%);
+          transform: scale(67%);
+}
+
+main .bcg-bottom {
+  position: absolute;
+  bottom: -135%;
+  right: -35%;
+  -webkit-transform: scale(73%);
+          transform: scale(73%);
+}
+
+.profile__card {
+  height: 215px;
+  max-width: 200px;
+  background-color: #fff;
+  margin: auto;
+  z-index: 1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card__pattern {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.card__pattern::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+.profile__image {
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+}
+
+.profile__info {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.profile__info span {
+  color: var(--var-DarkGrayishBlue);
+  font-size: 10px;
+}
+
+.profile__stat {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 22px 30px 0;
+  line-height: 1.1;
+}
+
+.profile__stat span {
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+.profile__stat::before {
+  position: absolute;
+  content: "";
+  background-color: #e8e8e8;
+  top: -13px;
+  height: 1px;
+  width: calc(100% + 60px);
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
