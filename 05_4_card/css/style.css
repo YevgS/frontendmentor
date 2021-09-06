@@ -78,6 +78,7 @@ main {
 .title {
   letter-spacing: -0.2px;
   font-size: 28px;
+  font-weight: 200;
 }
 
 @media (min-width: 1050px) {
@@ -88,7 +89,7 @@ main {
 
 .subtitle {
   font-weight: 600;
-  color: black;
+  color: var(--clr-veryDarkBlue);
   margin-bottom: 15px;
   letter-spacing: 0.2px;
   font-size: 28px;
@@ -145,6 +146,14 @@ main {
 @media (min-width: 1050px) {
   .card {
     margin-bottom: 0;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+  .card:hover {
+    -webkit-transform: translateY(-1em);
+            transform: translateY(-1em);
   }
 }
 
@@ -152,7 +161,7 @@ h2 {
   font-size: 18px;
   letter-spacing: 0.2px;
   font-weight: bold;
-  color: black;
+  color: var(--clr-veryDarkBlue);
   margin-bottom: 10px;
 }
 
