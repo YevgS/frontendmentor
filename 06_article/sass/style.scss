@@ -61,7 +61,7 @@ main {
 	overflow: hidden;
 	position: relative;
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-	@media (max-width: 630px) {
+	@media (max-width: 875px) {
 		max-width: 400px;
 	}
 	.card__img {
@@ -76,9 +76,6 @@ main {
 			object-fit: cover;
 			object-position: center;
 		}
-		@media (max-width: 630px) {
-			height: 32vh;
-		}
 	}
 	.text__content {
 		background: #ffffff;
@@ -90,6 +87,7 @@ main {
 }
 
 .info__bottom {
+	position: relative;
 	background-color: #ffffff;
 	padding: 15px 30px;
 	display: flex;
@@ -125,33 +123,31 @@ main {
 	}
 }
 
-@media (max-width: 630px) {
-	.info__bottom.active {
-		display: none;
-	}
-}
-
 .info__hidden {
-	display: none;
-	@media (max-width: 630px) {
+	position: absolute;
+	inset: 0;
+	padding: 15px 30px;
+	border-radius: 0 0 0 10px;
+	display: flex;
+	background-color: var(--clr-veryDarkGrayishBlue);
+	align-items: center;
+	gap: 18px;
+	p {
+		line-height: 40px;
+		text-transform: uppercase;
+		letter-spacing: normal;
+		letter-spacing: 3px;
+		color: var(--clr-GrayishBlue);
+	}
+	transform: translateX(100%);
+	transition: all 0.7s ease-out;
+	@media (max-width: 875px) {
 		&.active {
-			padding: 15px 30px;
-			display: flex;
-			background-color: var(--clr-veryDarkGrayishBlue);
-			align-items: center;
-			gap: 15px;
-			p {
-				line-height: 40px;
-				text-transform: uppercase;
-				letter-spacing: normal;
-				letter-spacing: 3px;
-				color: var(--clr-GrayishBlue);
-			}
+			// display: flex;
+			transform: translateX(0);
 		}
 	}
 }
-
-// -------------------------------------------------
 
 .share__arrow {
 	position: absolute;
@@ -200,8 +196,6 @@ main {
 	}
 }
 
-// ------------------------------------------------------
-
 .icon__share__desktop {
 	visibility: hidden;
 	opacity: 0;
@@ -242,7 +236,7 @@ main {
 	}
 }
 
-@media (min-width: 630px) {
+@media (min-width: 875px) {
 	div.icon__share__desktop.active {
 		visibility: visible;
 		opacity: 0.9;
@@ -251,13 +245,13 @@ main {
 
 // -----------------------------------------------------
 
-@media (min-width: 631px) {
+@media (min-width: 876px) {
 	main {
 		margin: auto;
 	}
 	.card {
 		display: flex;
-		max-width: 620px;
+		max-width: 720px;
 	}
 	.card__img {
 		min-width: 40%;

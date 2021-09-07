@@ -67,7 +67,7 @@ main {
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-@media (max-width: 630px) {
+@media (max-width: 875px) {
   .card {
     max-width: 400px;
   }
@@ -90,12 +90,6 @@ main {
      object-position: center;
 }
 
-@media (max-width: 630px) {
-  .card .card__img {
-    height: 32vh;
-  }
-}
-
 .card .text__content {
   background: #ffffff;
   padding: 40px 30px 30px;
@@ -106,6 +100,7 @@ main {
 }
 
 .info__bottom {
+  position: relative;
   background-color: #ffffff;
   padding: 15px 30px;
   display: -webkit-box;
@@ -150,34 +145,37 @@ main {
   color: var(--clrGrayishBlue);
 }
 
-@media (max-width: 630px) {
-  .info__bottom.active {
-    display: none;
-  }
-}
-
 .info__hidden {
-  display: none;
+  position: absolute;
+  inset: 0;
+  padding: 15px 30px;
+  border-radius: 0 0 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--clr-veryDarkGrayishBlue);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
-@media (max-width: 630px) {
+.info__hidden p {
+  line-height: 40px;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  letter-spacing: 3px;
+  color: var(--clr-GrayishBlue);
+}
+
+@media (max-width: 875px) {
   .info__hidden.active {
-    padding: 15px 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: var(--clr-veryDarkGrayishBlue);
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 15px;
-  }
-  .info__hidden.active p {
-    line-height: 40px;
-    text-transform: uppercase;
-    letter-spacing: normal;
-    letter-spacing: 3px;
-    color: var(--clr-GrayishBlue);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -279,14 +277,14 @@ main {
   border-top: 10px solid var(--clr-desaturatedDarkBlue);
 }
 
-@media (min-width: 630px) {
+@media (min-width: 875px) {
   div.icon__share__desktop.active {
     visibility: visible;
     opacity: 0.9;
   }
 }
 
-@media (min-width: 631px) {
+@media (min-width: 876px) {
   main {
     margin: auto;
   }
@@ -294,7 +292,7 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-width: 620px;
+    max-width: 720px;
   }
   .card__img {
     min-width: 40%;
