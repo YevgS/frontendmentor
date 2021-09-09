@@ -160,6 +160,9 @@ main {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .card {
+    padding-inline: 40px;
+  }
   .card__1 {
     min-width: 630px;
   }
@@ -179,10 +182,8 @@ main {
   .card__2 p {
     margin-bottom: 22px;
     font-size: 15px;
-    letter-spacing: 0.6px;
   }
   .card__3 {
-    padding-left: 40px;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     border-radius: 0 0 7px 0px;
