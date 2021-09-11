@@ -57,6 +57,9 @@ body {
 	background-color: var(--clr-violet);
 	inset: 0;
 	z-index: -1;
+	.desktop {
+		display: none;
+	}
 }
 
 main {
@@ -84,6 +87,7 @@ main {
 	.huddle__text {
 		margin-bottom: 25px;
 		letter-spacing: 0.6px;
+		opacity: 0.9;
 	}
 
 	.huddle__register {
@@ -145,9 +149,11 @@ main {
 
 @media (min-width: 920px) {
 	.background {
-		img {
-			height: 100%;
-			object-fit: cover;
+		.mobile {
+			display: none;
+		}
+		.desktop {
+			display: block;
 		}
 	}
 	main {
@@ -164,12 +170,14 @@ main {
 			margin: 0;
 			padding-right: 50px;
 			flex: 1 0 60%;
-			max-width: 750px;
+			max-width: 800px;
 		}
 		.main__text {
 			padding-top: 3vw;
 			text-align: left;
 			flex: 1 1 40%;
+			font-size: 20px;
+			// max-width: 57ch;
 			h1 {
 				font-size: 30px;
 			}
@@ -196,8 +204,9 @@ main {
 			margin: 0;
 			position: absolute;
 			right: 0;
+			bottom: 50px;
 			ul.social__list {
-				margin: 0 80px 0 0;
+				margin: 0 120px 0px 0;
 				li {
 					height: 40px;
 					width: 40px;
