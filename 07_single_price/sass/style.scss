@@ -145,7 +145,7 @@ main {
 @media (min-width: 700px) {
 	.cards {
 		display: flex;
-		width: 630px;
+		// width: 630px;
 		flex-wrap: wrap;
 	}
 
@@ -154,13 +154,15 @@ main {
 	}
 
 	.card__1 {
-		min-width: 630px;
+		flex: 1 1 100%;
+		min-width: 100%;
 	}
 
 	.card__2 {
+		flex: 1 1 50%;
+		min-width: 50%;
 		padding-top: 20px;
 		padding-right: 40px;
-		flex-basis: 100%;
 		border-radius: 0 0 0 7px;
 		.price {
 			margin-bottom: 10px;
@@ -175,7 +177,8 @@ main {
 	}
 
 	.card__3 {
-		flex-basis: 100%;
+		flex: 1 1 50%;
+		min-width: 50%;
 		border-radius: 0 0 7px 0px;
 	}
 }

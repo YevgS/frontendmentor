@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+:root {
+  --ff-headings: "Poppins";
+  --ff-body: "Open Sans";
+  /* Primary */
+  --clr-violet: hsl(257, 40%, 49%);
+  --clr-softMagenta: hsl(300, 69%, 71%);
+  /* Neutral */
+  --mobile: 375px;
+  --desktop: 1440px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2 {
+  font-size: 16px;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+body {
+  height: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--ff-body), sans-serif;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.background {
+  position: fixed;
+  background-color: var(--clr-violet);
+  inset: 0;
+  z-index: -1;
+}
+
+main {
+  margin: 35px 30px 0px;
+  text-align: center;
+}
+
+main .logo__img {
+  height: 40px;
+  width: clamp(130px, 30vw, 200px);
+  margin-bottom: 50px;
+}
+
+main .main__img {
+  margin-bottom: 60px;
+}
+
+main h1 {
+  font-size: 24px;
+  font-family: var(--ff-headings), sans-serif;
+  margin-bottom: 25px;
+}
+
+main h1 span {
+  display: block;
+}
+
+main .huddle__text {
+  margin-bottom: 25px;
+  letter-spacing: 0.6px;
+}
+
+main .huddle__register {
+  border-radius: 20px;
+  margin-bottom: 60px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 15px;
+  -webkit-transition: color, background-color 0.2s ease-in;
+  transition: color, background-color 0.2s ease-in;
+}
+
+main .huddle__register:hover {
+  background-color: var(--clr-softMagenta);
+}
+
+main .huddle__register:hover a {
+  color: #ffffff;
+}
+
+main .huddle__register a {
+  display: block;
+  padding: 10px 75px;
+  text-decoration: none;
+  font-family: var(--ff-headings), sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+main .social__links {
+  margin-bottom: 50px;
+}
+
+main .social__links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+main .social__links ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  border: 1.5px solid #ffffff;
+  -webkit-transition: color, border-color 0.3s ease;
+  transition: color, border-color 0.3s ease;
+}
+
+main .social__links ul li:hover {
+  border-color: var(--clr-softMagenta);
+}
+
+main .social__links ul li:hover a {
+  color: var(--clr-softMagenta);
+}
+
+main .social__links ul li a {
+  color: #ffffff;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+main hr {
+  visibility: hidden;
+}
+
+@media (min-width: 920px) {
+  main {
+    text-align: right;
+    margin: 25px 3vw;
+  }
+  main .logo__img {
+    margin-bottom: 70px;
+  }
+  main .main__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .main__img {
+    margin: 0;
+    padding-right: 50px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 60%;
+            flex: 1 0 60%;
+  }
+  main .main__text {
+    padding-top: 3vw;
+    text-align: left;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40%;
+            flex: 1 1 40%;
+  }
+  main .main__text h1 {
+    font-size: 30px;
+  }
+  main .huddle__register {
+    border-radius: 30px;
+    margin-bottom: 60px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 15px;
+    -webkit-transition: color, background-color 0.2s ease-in;
+    transition: color, background-color 0.2s ease-in;
+  }
+  main .huddle__register:hover {
+    background-color: var(--clr-softMagenta);
+  }
+  main .huddle__register:hover a {
+    color: #ffffff;
+  }
+  main .huddle__register a {
+    padding: 12px 50px;
+    font-size: 16px;
+  }
+  main div.social__links {
+    margin: 0;
+    position: absolute;
+    right: 0;
+  }
+  main div.social__links ul.social__list {
+    margin: 0 60px 0 0;
+  }
+}

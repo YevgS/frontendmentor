@@ -156,7 +156,6 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 630px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -164,13 +163,18 @@ main {
     padding-inline: 40px;
   }
   .card__1 {
-    min-width: 630px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    min-width: 100%;
   }
   .card__2 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+    min-width: 50%;
     padding-top: 20px;
     padding-right: 40px;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
     border-radius: 0 0 0 7px;
   }
   .card__2 .price {
@@ -184,8 +188,10 @@ main {
     font-size: 15px;
   }
   .card__3 {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+    min-width: 50%;
     border-radius: 0 0 7px 0px;
   }
 }
