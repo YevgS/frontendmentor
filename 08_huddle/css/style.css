@@ -163,11 +163,17 @@ main hr {
 }
 
 @media (min-width: 920px) {
+  .background img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   main {
     text-align: right;
     margin: 25px 3vw;
   }
   main .logo__img {
+    margin-top: 50px;
     margin-bottom: 70px;
   }
   main .main__content {
@@ -181,6 +187,7 @@ main hr {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 60%;
             flex: 1 0 60%;
+    max-width: 750px;
   }
   main .main__text {
     padding-top: 3vw;
@@ -216,6 +223,15 @@ main hr {
     right: 0;
   }
   main div.social__links ul.social__list {
-    margin: 0 60px 0 0;
+    margin: 0 80px 0 0;
+  }
+  main div.social__links ul.social__list li {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+  }
+  main div.social__links ul.social__list li a {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }

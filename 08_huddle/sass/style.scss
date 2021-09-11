@@ -36,10 +36,6 @@ h2 {
 	font-size: 16px;
 }
 
-html {
-	// height: 100%;
-}
-
 ul,
 li {
 	list-style-type: none;
@@ -148,10 +144,17 @@ main {
 }
 
 @media (min-width: 920px) {
+	.background {
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 	main {
 		text-align: right;
 		margin: 25px 3vw;
 		.logo__img {
+			margin-top: 50px;
 			margin-bottom: 70px;
 		}
 		.main__content {
@@ -161,6 +164,7 @@ main {
 			margin: 0;
 			padding-right: 50px;
 			flex: 1 0 60%;
+			max-width: 750px;
 		}
 		.main__text {
 			padding-top: 3vw;
@@ -193,7 +197,15 @@ main {
 			position: absolute;
 			right: 0;
 			ul.social__list {
-				margin: 0 60px 0 0;
+				margin: 0 80px 0 0;
+				li {
+					height: 40px;
+					width: 40px;
+					border-radius: 50px;
+					a {
+						transform: scale(1);
+					}
+				}
 			}
 		}
 	}
