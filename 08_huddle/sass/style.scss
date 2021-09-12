@@ -44,7 +44,6 @@ li {
 // -------------------------------------------------------
 
 body {
-	height: 100%;
 	font-size: 16px;
 	font-weight: 400;
 	font-family: var(--ff-body), sans-serif;
@@ -72,6 +71,7 @@ main {
 		margin-bottom: 50px;
 	}
 	.main__img {
+		min-width: 160px;
 		margin-bottom: 60px;
 	}
 
@@ -98,7 +98,7 @@ main {
 		&:hover {
 			background-color: var(--clr-softMagenta);
 			a {
-				color: #ffffff;
+				color: var(--clr-violet);
 			}
 		}
 		a {
@@ -113,11 +113,10 @@ main {
 
 	.social__links {
 		margin-bottom: 50px;
-		ul {
+		.social__list {
 			display: flex;
 			justify-content: center;
 			gap: 20px;
-			margin-bottom: 50px;
 			li {
 				display: flex;
 				align-items: center;
@@ -147,6 +146,8 @@ main {
 	}
 }
 
+// ---------------------------------------------------
+
 @media (min-width: 920px) {
 	.background {
 		.mobile {
@@ -158,10 +159,10 @@ main {
 	}
 	main {
 		text-align: right;
-		margin: 25px 3vw;
+		margin: 0 3vw;
 		.logo__img {
-			margin-top: 50px;
-			margin-bottom: 70px;
+			margin-bottom: 110px;
+			padding-top: 50px;
 		}
 		.main__content {
 			display: flex;
@@ -170,16 +171,16 @@ main {
 			margin: 0;
 			padding-right: 50px;
 			flex: 1 0 60%;
-			max-width: 800px;
+			max-width: 780px;
 		}
 		.main__text {
-			padding-top: 3vw;
+			padding-top: 3.5vw;
 			text-align: left;
 			flex: 1 1 40%;
-			font-size: 20px;
-			// max-width: 57ch;
+			font-size: 16px;
 			h1 {
-				font-size: 30px;
+				font-size: 36px;
+				line-height: 1.6;
 			}
 		}
 
@@ -200,13 +201,11 @@ main {
 			}
 		}
 
-		div.social__links {
-			margin: 0;
-			position: absolute;
-			right: 0;
-			bottom: 50px;
+		.social__links {
+			display: inline-block;
+			margin-left: auto;
+			margin-bottom: 0;
 			ul.social__list {
-				margin: 0 120px 0px 0;
 				li {
 					height: 40px;
 					width: 40px;
