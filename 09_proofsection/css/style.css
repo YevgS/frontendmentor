@@ -123,7 +123,7 @@ main .customer {
   color: #fff;
   background-color: var(--clr-veryDarkMagenta);
   margin-bottom: 15px;
-  padding: 40px 30px;
+  padding: 40px 28px;
   border-radius: 8px;
   text-align: start;
 }
