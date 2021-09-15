@@ -123,7 +123,7 @@ main .customer {
   color: #fff;
   background-color: var(--clr-veryDarkMagenta);
   margin-bottom: 15px;
-  padding: 40px 28px;
+  padding: 30px 28px;
   border-radius: 8px;
   text-align: start;
 }
@@ -187,7 +187,7 @@ main .customer__avatar {
   .bcg__bottom__desk {
     position: absolute;
     bottom: 0;
-    right: -30%;
+    right: 0%;
     z-index: -1;
   }
 }
