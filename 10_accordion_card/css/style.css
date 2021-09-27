@@ -183,6 +183,7 @@ body {
 
 .faq__card .main__faq .faq__items .faq__item.active .faq__text {
   display: block;
+  padding-top: 10px;
 }
 
 .faq__card .main__faq .faq__items .faq__item.active .faq__title::after {
