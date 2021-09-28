@@ -170,11 +170,13 @@ body {
 }
 
 .faq__card .main__faq .faq__items .faq__item .faq__text {
-  display: none;
+  line-height: 0;
+  opacity: 0;
+  visibility: hidden;
   letter-spacing: 0.5px;
   width: 50ch;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .faq__card .main__faq .faq__items .faq__item.active h2 {
@@ -182,7 +184,9 @@ body {
 }
 
 .faq__card .main__faq .faq__items .faq__item.active .faq__text {
-  display: block;
+  line-height: 1.6;
+  opacity: 1;
+  visibility: visible;
   padding-top: 10px;
 }
 
@@ -201,7 +205,7 @@ body {
     position: relative;
     display: block;
     border-radius: 20px;
-    height: 100%;
+    height: 600px;
     width: 100%;
   }
   main .faq__card .main__img {

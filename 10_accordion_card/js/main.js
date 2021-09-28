@@ -10,3 +10,10 @@ document.querySelectorAll(".faq__title").forEach(item =>
 		}
 	})
 );
+
+const body = document.querySelector("body");
+body.addEventListener("click", function (e) {
+	if (e.target === body) {
+		document.querySelectorAll(".faq__item").forEach(elem => elem.classList.remove("active"));
+	}
+});
