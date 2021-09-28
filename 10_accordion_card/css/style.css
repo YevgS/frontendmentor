@@ -67,6 +67,7 @@ body {
   background-image: linear-gradient(var(--gr-softViolet), var(--gr-blue));
   background-repeat: no-repeat;
   padding: 120px 20px;
+  overflow-y: hidden;
 }
 
 .faq__card {
