@@ -91,6 +91,10 @@ main {
   top: 0;
 }
 
+.img__hero__mob {
+  display: none;
+}
+
 .main__text {
   width: 57%;
   padding-left: 80px;
@@ -297,10 +301,14 @@ input:focus:-ms-input-placeholder {
     margin-top: 90px;
   }
   main .middle__section .img__hero {
+    display: none;
+  }
+  main .middle__section .img__hero__mob {
+    display: block;
     position: absolute;
     inset: 0;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
     -o-object-position: top;
        object-position: top;
     width: 100%;

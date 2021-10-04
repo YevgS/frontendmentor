@@ -102,6 +102,10 @@ main {
 	top: 0;
 }
 
+.img__hero__mob {
+	display: none;
+}
+
 .main__text {
 	width: 57%;
 	padding-left: 80px;
@@ -291,9 +295,13 @@ input:focus {
 			overflow: hidden;
 			margin-top: 90px;
 			.img__hero {
+				display: none;
+			}
+			.img__hero__mob {
+				display: block;
 				position: absolute;
 				inset: 0;
-				object-fit: cover;
+				object-fit: contain;
 				object-position: top;
 				width: 100%;
 				height: 100%;
