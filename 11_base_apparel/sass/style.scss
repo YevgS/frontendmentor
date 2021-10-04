@@ -74,6 +74,7 @@ body {
 	background-position: top left;
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-color: rgba(255, 192, 203, 0.1);
 }
 
 main {
@@ -83,7 +84,6 @@ main {
 	overflow: hidden;
 	background: linear-gradient(135deg, var(--gd-from), var(--gd-to));
 	mix-blend-mode: multiply;
-	// opacity: 0.9;
 }
 
 .img__bcg {
@@ -138,7 +138,7 @@ p {
 	letter-spacing: 0.1px;
 	width: 44ch;
 	margin-bottom: 15px;
-	color: var(--clr-darkGrayishRed);
+	color: var(--clr-desaturatedRed);
 }
 
 // ------------ Form -----------
@@ -192,14 +192,14 @@ p {
 		right: 30%;
 		height: 34px;
 		width: 60px;
-		background-color: var(--clr-softRed);
+		background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 		border-radius: 25px;
 		cursor: pointer;
 		&:focus {
 			box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 9px;
 		}
 		&:hover {
-			background-color: #f29b9a;
+			background: #f29b9a;
 			box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 9px;
 		}
 		img {

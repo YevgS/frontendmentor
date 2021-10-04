@@ -64,6 +64,7 @@ body {
   background-position: top left;
   background-repeat: no-repeat;
   background-size: contain;
+  background-color: rgba(255, 192, 203, 0.1);
 }
 
 main {
@@ -130,7 +131,7 @@ p {
   letter-spacing: 0.1px;
   width: 44ch;
   margin-bottom: 15px;
-  color: var(--clr-darkGrayishRed);
+  color: var(--clr-desaturatedRed);
 }
 
 .form__body {
@@ -189,7 +190,7 @@ p {
   right: 30%;
   height: 34px;
   width: 60px;
-  background-color: var(--clr-softRed);
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   border-radius: 25px;
   cursor: pointer;
 }
@@ -200,7 +201,7 @@ p {
 }
 
 .form__body .send__button:hover {
-  background-color: #f29b9a;
+  background: #f29b9a;
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 9px;
           box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 9px;
 }
