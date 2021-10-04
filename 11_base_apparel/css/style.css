@@ -156,7 +156,7 @@ p {
 
 .form__body .email__block .email__input {
   outline: none;
-  background: #ffffff;
+  background: transparent;
   height: 34px;
   width: 260px;
   border: 1px solid #b9b9b9;
@@ -351,7 +351,6 @@ input:focus:-ms-input-placeholder {
     display: block;
     height: 40px;
     margin: 0 auto;
-    background: transparent;
   }
   main .main__text .email__block .icon__error {
     top: 8px;

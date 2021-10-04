@@ -158,7 +158,7 @@ p {
 		}
 		.email__input {
 			outline: none;
-			background: #ffffff;
+			background: transparent;
 			height: 34px;
 			width: 260px;
 			border: 1px solid #b9b9b9;
@@ -337,7 +337,6 @@ input:focus {
 					display: block;
 					height: 40px;
 					margin: 0 auto;
-					background: transparent;
 				}
 
 				.icon__error {
