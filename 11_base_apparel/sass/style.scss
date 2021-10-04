@@ -68,17 +68,22 @@ body {
 }
 
 .main__bcg {
-	background: linear-gradient(135deg, var(--gd-from2), var(--gd-to2));
+	position: relative;
+	isolation: isolate;
+	background-image: url("../images/bg-pattern-desktop.svg");
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 main {
 	position: relative;
 	height: 450px;
 	width: 800px;
-	background-position: top left;
-	background-repeat: no-repeat;
-	background-size: contain;
 	overflow: hidden;
+	background: linear-gradient(135deg, var(--gd-from), var(--gd-to));
+	mix-blend-mode: multiply;
+	// opacity: 0.9;
 }
 
 .img__bcg {
@@ -284,6 +289,7 @@ input:focus {
 			padding: 0 0 80% 0;
 			position: relative;
 			overflow: hidden;
+			margin-top: 90px;
 			.img__hero {
 				position: absolute;
 				inset: 0;
