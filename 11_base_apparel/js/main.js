@@ -55,13 +55,25 @@
 
 	// email validation
 	function emailTest(input) {
-		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+		// return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input.value);
+		return !/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+			input.value
+		);
 	}
 
 	const emailInput = document.querySelector(".email__input");
-	console.log(emailInput);
+	// console.log(emailInput);
 	emailInput.addEventListener("blur", function () {
 		document.querySelector(".email__input").classList.remove("_active");
 		document.querySelector(".email__block").classList.remove("_active");
+	});
+
+	document.getElementById("email").addEventListener("focus", () => {
+		// remove error message when cursor focused
+		document.getElementById("email").classList.remove("_active");
+		// also the error icon
+		document.getElementById("error__icon").classList.remove("_active");
+		// and the highlighted border
+		// document.getElementById("errorBorder").classList.remove("error");
 	});
 })();

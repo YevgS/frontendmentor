@@ -44,6 +44,12 @@ li {
   list-style-type: none;
 }
 
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff6f7 inset !important;
+}
+
 body {
   height: 100vh;
   display: -ms-grid;
@@ -145,7 +151,7 @@ p {
 .form__body .email__block img {
   position: absolute;
   top: 5px;
-  right: 180px;
+  right: 167px;
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
   opacity: 0;
@@ -158,10 +164,11 @@ p {
   outline: none;
   background: transparent;
   height: 34px;
-  width: 260px;
+  width: 275px;
   border: 1px solid #b9b9b9;
   border-radius: 25px;
   padding-left: 20px;
+  padding-right: 90px;
   font-size: 10px;
   color: var(--clr-darkGrayishRed);
   font-weight: 600;
@@ -187,7 +194,7 @@ p {
   outline: none;
   position: absolute;
   top: 0;
-  right: 30%;
+  right: 27%;
   height: 34px;
   width: 60px;
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
@@ -365,7 +372,7 @@ input:focus:-ms-input-placeholder {
   }
   main .main__text .send__button {
     height: 40px;
-    right: 10%;
+    right: 8%;
     width: 52px;
   }
   main .main__text .send__button img {
