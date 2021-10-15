@@ -122,6 +122,12 @@ form {
 		font-weight: 700;
 	}
 
+	input:focus {
+		outline: none;
+		border: 2px solid var(--clr-blue);
+		caret-color: var(--clr-blue);
+	}
+
 	.claim__trail {
 		position: relative;
 		height: 50px;
@@ -171,6 +177,7 @@ form {
 		width: 20px;
 		top: 15px;
 		right: 14px;
+		-webkit-user-drag: none;
 	}
 	.text__error {
 		position: absolute;
