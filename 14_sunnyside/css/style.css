@@ -368,6 +368,7 @@ header nav .header__menu li .menu__link:hover {
   font-family: var(--ff-body-s);
   font-size: 16px;
   border-radius: 50px;
+  color: var(--clr-verydarkdesaturatedblue);
 }
 
 @media (max-width: 880px) {

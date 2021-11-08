@@ -274,6 +274,7 @@ header {
 						font-family: var(--ff-body-s);
 						font-size: 16px;
 						border-radius: 50px;
+						color: var(--clr-verydarkdesaturatedblue);
 						@media (max-width: 880px) {
 							animation: fadeInMob 0.6s forwards;
 						}
