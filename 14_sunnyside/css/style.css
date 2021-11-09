@@ -514,6 +514,8 @@ h1 {
 }
 
 .section-1 .text__block a {
+  display: inline-block;
+  padding-inline: 8px;
   isolation: isolate;
   position: relative;
   text-decoration: none;
@@ -522,22 +524,38 @@ h1 {
   text-transform: uppercase;
 }
 
-.section-1 .text__block a::before {
+.section-1 .text__block a::before, .section-1 .text__block a::after {
   position: absolute;
+  display: block;
   content: "";
-  bottom: -2px;
-  height: 10px;
-  width: 111%;
+  bottom: 0;
+  left: 0;
+  height: 11px;
+  width: 100%;
   border-radius: 5px;
-  -webkit-transform: translateX(-7px);
-          transform: translateX(-7px);
-  background: var(--clr-yellow);
-  opacity: 0.3;
   z-index: -1;
 }
 
-.section-1 .text__block a:hover::before {
-  opacity: 1;
+.section-1 .text__block a::before {
+  opacity: 0.3;
+  background-color: var(--clr-yellow);
+}
+
+.section-1 .text__block a::after {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: background-color 0.15s ease, -webkit-transform 0.2s ease-in-out;
+  transition: background-color 0.15s ease, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.15s ease;
+  transition: transform 0.2s ease-in-out, background-color 0.15s ease, -webkit-transform 0.2s ease-in-out;
+}
+
+.section-1 .text__block a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  background-color: var(--clr-yellow);
 }
 
 .section-1 .text__block-2 {
@@ -550,7 +568,11 @@ h1 {
 }
 
 .section-1 .text__block-2 a::before {
-  background: var(--clr-softRed);
+  background-color: var(--clr-softRed);
+}
+
+.section-1 .text__block-2 a:hover::after {
+  background-color: var(--clr-softRed);
 }
 
 .section-1 .text__block-3 {
@@ -766,13 +788,25 @@ footer .social__list i.fab:hover {
   }
   .section-1 .text__block {
     text-align: center;
+    padding-top: 75px;
   }
   .section-1 .text__block h2 {
     margin-inline: auto;
-    font-size: clamp(41px, 9vw, 45px);
+    font-size: clamp(30px, 7vw, 45px);
   }
   .section-1 .text__block p.about__text {
-    font-size: clamp(20px, 5vw, 25px);
+    font-size: clamp(18px, 4vw, 25px);
+  }
+  .section-1 .text__block-1,
+  .section-1 .text__block-2 {
+    aspect-ratio: 1.7/1;
+  }
+  .section-1 .text__block-3 h3 {
+    margin-inline: auto;
+    font-size: clamp(30px, 7vw, 45px);
+  }
+  .section-1 .text__block-3 p.text__photography {
+    font-size: clamp(18px, 4vw, 25px);
   }
   .section-1 .desktop {
     display: none;
@@ -803,30 +837,4 @@ footer .social__list i.fab:hover {
   footer .footer__menu ul {
     gap: clamp(20px, 4vw, 70px);
   }
-}
-
-input:focus::-webkit-input-placeholder {
-  color: transparent;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-
-input:focus:-moz-placeholder {
-  /* Firefox 18- */
-  color: transparent;
-  -webkit-transition: color 0.2s ease;
-  transition: color 0.2s ease;
-}
-
-input:focus::-moz-placeholder {
-  /* Firefox 19+ */
-  color: transparent;
-  -webkit-transition: color 0.2s ease;
-  transition: color 0.2s ease;
-}
-
-input:focus:-ms-input-placeholder {
-  color: transparent;
-  -webkit-transition: color 0.2s ease;
-  transition: color 0.2s ease;
 }

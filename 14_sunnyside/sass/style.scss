@@ -403,26 +403,38 @@ h1 {
 			line-height: 1.6;
 		}
 		a {
+			display: inline-block;
+			padding-inline: 8px;
 			isolation: isolate;
 			position: relative;
 			text-decoration: none;
 			color: var(--clr-verydarkdesaturatedblue);
 			font-family: var(--ff-body-s);
 			text-transform: uppercase;
-			&::before {
+			&::before,
+			&::after {
 				position: absolute;
+				display: block;
 				content: "";
-				bottom: -2px;
-				height: 10px;
-				width: 111%;
+				bottom: 0;
+				left: 0;
+				height: 11px;
+				width: 100%;
 				border-radius: 5px;
-				transform: translateX(-7px);
-				background: var(--clr-yellow);
-				opacity: 0.3;
 				z-index: -1;
 			}
-			&:hover::before {
-				opacity: 1;
+			&::before {
+				opacity: 0.3;
+				background-color: var(--clr-yellow);
+			}
+			&::after {
+				transform: scaleX(0);
+				transform-origin: center;
+				transition: transform 0.2s ease-in-out, background-color 0.15s ease;
+			}
+			&:hover::after {
+				transform: scaleX(1);
+				background-color: var(--clr-yellow);
 			}
 		}
 	}
@@ -435,7 +447,10 @@ h1 {
 		}
 		a {
 			&::before {
-				background: var(--clr-softRed);
+				background-color: var(--clr-softRed);
+			}
+			&:hover::after {
+				background-color: var(--clr-softRed);
 			}
 		}
 	}
@@ -617,12 +632,27 @@ footer {
 		}
 		.text__block {
 			text-align: center;
+			padding-top: 75px;
 			h2 {
 				margin-inline: auto;
-				font-size: clamp(41px, 9vw, 45px);
+				font-size: clamp(30px, 7vw, 45px);
 			}
 			p.about__text {
-				font-size: clamp(20px, 5vw, 25px);
+				font-size: clamp(18px, 4vw, 25px);
+			}
+		}
+		.text__block-1,
+		.text__block-2 {
+			aspect-ratio: 1.7/1;
+		}
+
+		.text__block-3 {
+			h3 {
+				margin-inline: auto;
+				font-size: clamp(30px, 7vw, 45px);
+			}
+			p.text__photography {
+				font-size: clamp(18px, 4vw, 25px);
 			}
 		}
 		.desktop {
@@ -662,35 +692,5 @@ footer {
 				gap: clamp(20px, 4vw, 70px);
 			}
 		}
-	}
-}
-
-// -------------------- HIDE PLACEHOLDER TEXT ON FOCUS --------------------------
-
-input:focus {
-	&::-webkit-input-placeholder {
-		color: transparent;
-		-webkit-transition: color 0.3s ease;
-		transition: color 0.3s ease;
-	}
-
-	&:-moz-placeholder {
-		/* Firefox 18- */
-		color: transparent;
-		-webkit-transition: color 0.2s ease;
-		transition: color 0.2s ease;
-	}
-
-	&::-moz-placeholder {
-		/* Firefox 19+ */
-		color: transparent;
-		-webkit-transition: color 0.2s ease;
-		transition: color 0.2s ease;
-	}
-
-	&:-ms-input-placeholder {
-		color: transparent;
-		-webkit-transition: color 0.2s ease;
-		transition: color 0.2s ease;
 	}
 }
