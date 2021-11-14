@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<title>Frontend Mentor | Time tracking dashboard</title>
+	</head>
+	<body>
+		<main>
+			<div id="debug"></div>
+			<div class="main__dashboard">
+				<div class="main__info">Report for Jeremy Robson Robson</div>
+				<div class="main__period">Daily Weekly Monthly</div>
+			</div>
+
+			<div class="category__item">
+				<div class="work__category">Work</div>
+
+				<div class="work__hours daily">
+					5hrs
+					<span>Last Day - 7hrs</span>
+				</div>
+
+				<div class="weekly">
+					32hrs
+					<span>Last Week - 36hrs</span>
+				</div>
+
+				<div class="monthly">
+					103hrs
+					<span>Lasr Month - 128hrs</span>
+				</div>
+			</div>
+		</main>
+		<script>
+			fetch("data.json")
+				.then((response = response.json()))
+				.then(data => {
+					console.log(data);
+				});
+		</script>
+	</body>
+</html>

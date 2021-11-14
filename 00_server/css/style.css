@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 5rem 5rem 10rem;
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+  color: #555;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7f9f9), to(#8592e9));
+  background: linear-gradient(to bottom, #f7f9f9, #8592e9);
+}
+
+.products-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 110px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 6rem;
+  color: #16a085;
+  -webkit-transform: skewY(-5deg);
+          transform: skewY(-5deg);
+  text-align: center;
+  position: relative;
+  word-spacing: 3px;
+}
+
+.product__card {
+  height: 440px;
+  width: 240px;
+  margin: 20px;
+  background-color: #d5d8dc;
+  -webkit-transform: skewY(-4deg);
+          transform: skewY(-4deg);
+}
+
+.product__image__div {
+  width: 240px;
+  height: 230px;
+  margin: 0;
+  padding: 15px 65px;
+  background-color: #fff;
+}
+
+.product__image {
+  height: 200px;
+  width: 110px;
+}
+
+.product__name {
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 2px 10px;
+  color: #16a085;
+}
+
+.product__price {
+  color: #444;
+  padding: 2px 10px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.product__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.porduct__ROM,
+.product__color,
+.product__camera {
+  color: #444;
+  padding: 0 10px;
+  margin-top: 5px;
+}
+
+.product__link:link,
+.product__link:visited {
+  background-color: #16a085;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 4px 5px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+  width: 100%;
+}

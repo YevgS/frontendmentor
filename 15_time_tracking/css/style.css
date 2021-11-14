@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+:root {
+  --ff-body: "Rubik", sans-serif;
+  --fs-body: 19rem;
+  /* Primary */
+  --clr-blue: hsl(246, 80%, 60%);
+  --clr-lightRedWork: hsl(15, 100%, 70%);
+  --clr-softBlue: hsl(195, 74%, 62%);
+  --clr-lightRedStudy: hsl(348, 100%, 68%);
+  --clr-limeGreen: hsl(145, 58%, 55%);
+  --clr-violet: hsl(264, 64%, 52%);
+  --clr-softOrange: hsl(43, 84%, 65%);
+  /* Neutral */
+  --clr-veryDarkBlue: hsl(226, 43%, 10%);
+  --clr-darkBlue: hsl(235, 46%, 20%);
+  --clr-desaturatedBlue: hsl(235, 45%, 61%);
+  --clr-paleBlue: hsl(236, 100%, 87%);
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  -webkit-user-drag: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--ff-body-s);
+}
+
+html {
+  font-size: 6.25%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-size: var(--fs-body);
+  font-weight: 300;
+  font-family: var(--ff-body);
+  color: var(--clr-desaturatedBlue);
+  line-height: 1.4;
+  text-align: center;
+  background: #ffffff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
