@@ -12,37 +12,21 @@
 	</head>
 	<body>
 		<main>
-			<div id="debug"></div>
+			<!-- <img src="" id="rainbow" /> -->
+			<div id="traking"></div>
+			<!--  -->
 			<div class="main__dashboard">
 				<div class="main__info">Report for Jeremy Robson Robson</div>
-				<div class="main__period">Daily Weekly Monthly</div>
-			</div>
-
-			<div class="category__item">
-				<div class="work__category">Work</div>
-
-				<div class="work__hours daily">
-					5hrs
-					<span>Last Day - 7hrs</span>
-				</div>
-
-				<div class="weekly">
-					32hrs
-					<span>Last Week - 36hrs</span>
-				</div>
-
-				<div class="monthly">
-					103hrs
-					<span>Lasr Month - 128hrs</span>
+				<div class="main__period">
+					<p class="main__timeframe daily">Daily</p>
+					<p class="main__timeframe weekly">Weekly</p>
+					<p class="main__timeframe monthly">Monthly</p>
 				</div>
 			</div>
+			<!-- for HTML content -->
+			<div class="category__items"></div>
 		</main>
-		<script>
-			fetch("data.json")
-				.then((response = response.json()))
-				.then(data => {
-					console.log(data);
-				});
-		</script>
+
+		<script src="./js/app.js"></script>
 	</body>
 </html>

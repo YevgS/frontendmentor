@@ -88,3 +88,34 @@ body {
 	background: #ffffff;
 	transition: 0.5s;
 }
+
+.main__dashboard {
+	max-width: 300rem;
+	margin-inline: auto;
+	margin-bottom: 40px;
+}
+
+.main__period {
+	display: flex;
+	justify-content: space-between;
+	.main__timeframe {
+		cursor: pointer;
+	}
+}
+
+.category__item {
+	max-width: 300rem;
+	margin-inline: auto;
+}
+
+.card__header,
+.card__hours {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ellipsis {
+	width: 15px;
+	height: 4px;
+}
