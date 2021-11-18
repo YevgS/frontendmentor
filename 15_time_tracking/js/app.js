@@ -29,8 +29,8 @@ if (mainTimeframe.length > 0) {
 
 const categoryItems = document.querySelector(".category__items");
 
-function displayDailyCategory(title, current, previous) {
-	const html = `<div class="category__item">
+function displayDailyCategory(title, current, previous, item) {
+	const html = `<div class="category__item item_${item}">
 					<div class="card__header">
 						<div class="category">${title}</div>
 						<img class="ellipsis" src="./images/icon-ellipsis.svg" alt="" />
@@ -46,8 +46,8 @@ function displayDailyCategory(title, current, previous) {
 	categoryItems.insertAdjacentHTML("beforeend", html);
 }
 
-function displayWeeklyCategory(title, current, previous) {
-	const html = `<div class="category__item">
+function displayWeeklyCategory(title, current, previous, item) {
+	const html = `<div class="category__item item_${item}">
 					<div class="card__header">
 						<div class="category">${title}</div>
 						<img class="ellipsis" src="./images/icon-ellipsis.svg" alt="" />
@@ -61,8 +61,8 @@ function displayWeeklyCategory(title, current, previous) {
 	categoryItems.insertAdjacentHTML("beforeend", html);
 }
 
-function displayMonthlyCategory(title, current, previous) {
-	const html = `<div class="category__item">
+function displayMonthlyCategory(title, current, previous, item) {
+	const html = `<div class="category__item item_${item}">
 					<div class="card__header">
 						<div class="category">${title}</div>
 						<img class="ellipsis" src="./images/icon-ellipsis.svg" alt="" />
@@ -90,12 +90,15 @@ function getDailyInfo() {
 		.then(
 			function (dataArray) {
 				let [work, play, study, exercise, social, selfCare] = dataArray;
+				var item = 0;
+				console.log(item);
 				dataArray.forEach(elem => {
+					item++;
 					let title = elem.title;
 					let current = elem.timeframes.daily.current;
 					let previous = elem.timeframes.daily.previous;
 
-					displayDailyCategory(title, current, previous);
+					displayDailyCategory(title, current, previous, item);
 				});
 			},
 			function (error) {
@@ -118,11 +121,13 @@ function getWeeklyInfo() {
 		.then(
 			function (dataArray) {
 				let [work, play, study, exercise, social, selfCare] = dataArray;
+				var item = 0;
 				dataArray.forEach(elem => {
+					item++;
 					let title = elem.title;
 					let current = elem.timeframes.weekly.current;
 					let previous = elem.timeframes.weekly.previous;
-					displayWeeklyCategory(title, current, previous);
+					displayWeeklyCategory(title, current, previous, item);
 				});
 			},
 			function (error) {
@@ -144,12 +149,14 @@ function getMonthlyInfo() {
 		})
 		.then(
 			function (dataArray) {
+				var item = 0;
 				let [work, play, study, exercise, social, selfCare] = dataArray;
 				dataArray.forEach(elem => {
+					item++;
 					let title = elem.title;
 					let current = elem.timeframes.monthly.current;
 					let previous = elem.timeframes.monthly.previous;
-					displayMonthlyCategory(title, current, previous);
+					displayMonthlyCategory(title, current, previous, item);
 				});
 			},
 			function (error) {
