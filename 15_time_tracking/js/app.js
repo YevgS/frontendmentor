@@ -79,7 +79,6 @@ function displayMonthlyCategory(title, current, previous, item) {
 //  ------------------------------------------------------------------------
 
 function getDailyInfo() {
-	categoryItems.innerHTML = "";
 	fetch("data.json")
 		.then(function name(response) {
 			if (response.ok === false) {
@@ -105,12 +104,23 @@ function getDailyInfo() {
 				alert("Error #1: " + error);
 			}
 		);
+	categoryItems.innerHTML = "";
+
+	const periods = document.querySelectorAll(".main__timeframe");
+
+	for (let elem of periods) {
+		if (elem.classList.contains("_active")) {
+			elem.classList.remove("_active");
+		}
+		if (elem.classList.contains("daily")) {
+			elem.classList.add("_active");
+		}
+	}
 }
 
 //  ------------------------------------------------------------------------
 
 function getWeeklyInfo() {
-	categoryItems.innerHTML = "";
 	fetch("data.json")
 		.then(function name(response) {
 			if (response.ok === false) {
@@ -134,12 +144,24 @@ function getWeeklyInfo() {
 				alert("Error #1: " + error);
 			}
 		);
+
+	categoryItems.innerHTML = "";
+
+	const periods = document.querySelectorAll(".main__timeframe");
+
+	for (let elem of periods) {
+		if (elem.classList.contains("_active")) {
+			elem.classList.remove("_active");
+		}
+		if (elem.classList.contains("weekly")) {
+			elem.classList.add("_active");
+		}
+	}
 }
 
 //  ------------------------------------------------------------------------
 
 function getMonthlyInfo() {
-	categoryItems.innerHTML = "";
 	fetch("data.json")
 		.then(function name(response) {
 			if (response.ok === false) {
@@ -163,6 +185,18 @@ function getMonthlyInfo() {
 				alert("Error #1: " + error);
 			}
 		);
+	categoryItems.innerHTML = "";
+
+	const periods = document.querySelectorAll(".main__timeframe");
+
+	for (let elem of periods) {
+		if (elem.classList.contains("_active")) {
+			elem.classList.remove("_active");
+		}
+		if (elem.classList.contains("monthly")) {
+			elem.classList.add("_active");
+		}
+	}
 }
 
 getWeeklyInfo();
