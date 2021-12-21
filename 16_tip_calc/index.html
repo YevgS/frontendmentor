@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<title>Frontend Mentor | Tip calculator app</title>
+	</head>
+	<body>
+		<img class="logo" src="./images/logo.svg" alt="" />
+		<main>
+			<div class="calc__data">
+				<!--  -->
+				<h1>Bill</h1>
+				<div class="bill__total">
+					<input class="input total__bill" type="text" placeholder="0" maxlength="12" />
+					<img src="./images/icon-dollar.svg" alt="dollar-icon" />
+				</div>
+				<!--  -->
+				<h2>Select Tip %</h2>
+				<div class="tip__percent">
+					<div class="tip tip__5">5%</div>
+					<div class="tip tip__10">10%</div>
+					<div class="tip tip__15">15%</div>
+					<div class="tip tip__25">25%</div>
+					<div class="tip tip__50">50%</div>
+					<input class="tip__custom" type="text" maxlength="18" placeholder="Custom" />
+				</div>
+				<!--  -->
+
+				<!--  -->
+				<div class="block__error">
+					<h2>Number of People</h2>
+					<h2 class="zero__error">Can't be zero</h2>
+				</div>
+				<div class="number__people">
+					<input class="input people__number" type="text" placeholder="0" maxlength="18" />
+					<img class="person" src="./images/icon-person.svg" alt="person-icon" />
+				</div>
+			</div>
+
+			<div class="calc__result">
+				<div class="result__block">
+					<h3><span>Tip Amount</span> <br />/ person</h3>
+					<div class="sum tip__amount">$0.00</div>
+				</div>
+				<div class="result__block person">
+					<h3><span>Total</span> <br />/ person</h3>
+					<div class="sum total__person">$0.00</div>
+				</div>
+				<button class="reset__btn"><p>Reset</p></button>
+			</div>
+			<div class="hidden">
+				<span class="h_bill"></span>
+				<span class="h_tips"></span>
+				<span class="h_tip"></span>
+				<span class="h_num"></span>
+			</div>
+		</main>
+		<script src="./js/app.js"></script>
+	</body>
+</html>

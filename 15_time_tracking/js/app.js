@@ -54,7 +54,7 @@ function displayWeeklyCategory(title, current, previous, item) {
 					</div>
 					<div class="card__hours">
 						<span class="current">${current}hrs</span>
-						<div class="previous__hours"><span class="timeframe">Last Week</span> - <span class="hours">${previous}hrs</span></div>
+						<div class="previous__hours "><span class="timeframe">Last Week</span> - <span class="hours">${previous}hrs</span></div>
 					</div>
 				</div>`;
 
@@ -88,7 +88,6 @@ function getDailyInfo() {
 		})
 		.then(
 			function (dataArray) {
-				let [work, play, study, exercise, social, selfCare] = dataArray;
 				var item = 0;
 				console.log(item);
 				dataArray.forEach(elem => {
@@ -130,7 +129,6 @@ function getWeeklyInfo() {
 		})
 		.then(
 			function (dataArray) {
-				let [work, play, study, exercise, social, selfCare] = dataArray;
 				var item = 0;
 				dataArray.forEach(elem => {
 					item++;
@@ -172,7 +170,6 @@ function getMonthlyInfo() {
 		.then(
 			function (dataArray) {
 				var item = 0;
-				let [work, play, study, exercise, social, selfCare] = dataArray;
 				dataArray.forEach(elem => {
 					item++;
 					let title = elem.title;
