@@ -162,6 +162,7 @@ h1 {
 	.eth__price {
 		position: relative;
 		color: var(--clr-cyan);
+		font-weight: 600;
 		padding-left: 18rem;
 		&::before {
 			position: absolute;
