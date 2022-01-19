@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 :root {
-  --ff-body: "Outfit", monospace;
+  --ff-body: "Outfit", sans-serif;
   --fs-body: 18rem;
   /* Primary */
   --clr-softBlue: hsl(215, 51%, 70%);
@@ -95,6 +95,16 @@ body {
   background-color: var(--clr-VeryDarkBlueMain);
   line-height: 1.4;
   padding: 70rem 30rem 0;
+}
+
+@media (min-width: 450px) {
+  body {
+    height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    padding: 0;
+  }
 }
 
 main {
