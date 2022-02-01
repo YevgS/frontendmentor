@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+:root {
+  --ff-body: "Barlow Semi Condensed", sans-serif;
+  --fs-body: 13rem;
+  /* Primary */
+  --clr-moderateViolet: hsl(263, 55%, 52%);
+  --clr-veryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --clr-veryDarkBlackishBlue: hsl(219, 29%, 14%);
+  --clr-white: hsl(0, 0%, 100%);
+  /* Neutral 
+		1. "Verified Graduate" has the same color as the person's name with 50% opacity
+		2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+	*/
+  --clr-lightGray: hsl(0, 0%, 81%);
+  --clr-lightGrayishBlue: hsl(210, 46%, 95%);
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  -webkit-user-drag: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--ff-body);
+}
+
+html {
+  font-size: 6.25%;
+  min-width: 320px;
+}
+
+body {
+  font-size: var(--fs-body);
+  font-weight: 500;
+  font-family: var(--ff-body);
+  color: var(--clr-white);
+  background-color: var(--clr-lightGrayishBlue);
+  line-height: 1.4;
+  padding: 60rem 25rem 20rem;
+}
+
+@media (min-width: 1100px) {
+  body {
+    padding: 0rem;
+    height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+  body .wrapper {
+    display: -ms-grid;
+    display: grid;
+    gap: 30rem;
+    max-width: 1100rem;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
+  }
+  body .card {
+    margin: 0;
+  }
+  body p {
+    font-size: 18rem;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+  }
+  body .daniel {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: daniel;
+  }
+  body .jonathan {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: jonathan;
+  }
+  body .jeanette {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: jeanette;
+  }
+  body .jeanette p {
+    width: 20ch;
+  }
+  body .patrick {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: patrick;
+  }
+  body .kira {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 4;
+    grid-area: kira;
+  }
+}
+
+h1 {
+  display: none;
+}
+
+.card {
+  padding: 20rem 25rem 30rem;
+  border-radius: 10rem;
+  margin-bottom: 25rem;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.daniel {
+  position: relative;
+  background-color: var(--clr-moderateViolet);
+  border: 1.5px solid #624196;
+  z-index: -2;
+}
+
+.daniel::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 20rem;
+  height: 100px;
+  width: 100px;
+  display: block;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  z-index: -1;
+}
+
+.person__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15rem;
+  margin-bottom: 15rem;
+}
+
+.person__info img {
+  width: 32rem;
+  border-radius: 50%;
+  border: 1.5px solid #a775f2;
+}
+
+.person__info .person__name {
+  opacity: 0.8;
+}
+
+.person__info span {
+  display: block;
+  opacity: 0.6;
+  font-size: 12rem;
+}
+
+.quotation {
+  font-size: 16rem;
+}
+
+.quotation span {
+  display: block;
+  font-size: 13rem;
+  margin-top: 15rem;
+  opacity: 0.6;
+  letter-spacing: 0.2px;
+}
+
+.jonathan {
+  background-color: var(--clr-veryDarkGrayishBlue);
+  border: 1.5px solid var(--clr-veryDarkBlackishBlue);
+}
+
+.jonathan img {
+  border: 1.5px solid var(--clr-veryDarkBlackishBlue);
+}
+
+.jeanette {
+  background-color: #f6f6f6;
+  color: var(--clr-veryDarkBlackishBlue);
+  border: 1.5px solid #ffffff;
+}
+
+.jeanette img {
+  border: 1.5px solid #ffffff;
+}
+
+.patrick {
+  background-color: var(--clr-veryDarkBlackishBlue);
+  border: 1.5px solid black;
+}
+
+.patrick img {
+  border: 1.5px solid var(--clr-moderateViolet);
+}
+
+.kira {
+  background-color: #f6f6f6;
+  color: var(--clr-veryDarkBlackishBlue);
+  border: 1.5px solid #ffffff;
+}
+
+.kira img {
+  border: 1.5px solid #ffffff;
+}
