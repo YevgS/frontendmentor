@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+:root {
+  --ff-body: "Overpass", sans-serif;
+  --ff2-body: "Ubuntu", sans-serif;
+  --fs-body: 16rem;
+  /* Primary */
+  --clr-lightRed: hsl(356, 100%, 66%);
+  --clr-veryLightRed: hsl(355, 100%, 74%);
+  --clr-veryDarkBlue: hsl(208, 49%, 24%);
+  /* Neutral */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grayishBlue: hsl(240, 2%, 79%);
+  --clr-veryDarkGrayishBlue: hsl(207, 13%, 34%);
+  --clr-veryDarkBlackBlue: hsl(240, 10%, 16%);
+  /* Gradient */
+  --grd-veryLightRed: hsl(13, 100%, 72%);
+  --grd-lightRed: hsl(353, 100%, 62%);
+  --grd-veryDarkGrayBlue: hsl(237, 17%, 21%);
+  --grd-veryDarkDesaturatedBlue: hsl(237, 23%, 32%);
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  -webkit-user-drag: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--ff-body);
+}
+
+html {
+  font-size: 6.25%;
+  min-width: 320px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 14rem;
+  font-family: var(--ff2-body);
+  letter-spacing: 0.2px;
+  color: #ffddcc;
+  font-weight: 500;
+}
+
+body {
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  font-weight: 300;
+  color: var(--clr-white);
+  color: var(--clr-veryDarkGrayishBlue);
+  background-color: var(--clr-white);
+  line-height: 1.4;
+}
+
+.wrapper {
+  max-width: 1440rem;
+  max-width: 1100rem;
+  margin: 0 auto;
+  background-color: #fafafa;
+}
+
+.header {
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+  border-bottom-left-radius: 70rem;
+  text-align: center;
+  padding: 60rem 120rem 120rem 130rem;
+  color: var(--clr-white);
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--grd-veryLightRed)), to(var(--grd-lightRed)));
+  background-image: linear-gradient(to right, var(--grd-veryLightRed), var(--grd-lightRed));
+  margin-bottom: 100rem;
+}
+
+.header::before {
+  position: absolute;
+  content: "";
+  background-image: url("../images/bg-pattern-intro-desktop.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform: scale(5) translateX(27%) translateY(-4%);
+          transform: scale(5) translateX(27%) translateY(-4%);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.header .logo {
+  width: 80rem;
+  margin-right: 60rem;
+  -webkit-transform: translateY(-3rem);
+          transform: translateY(-3rem);
+}
+
+.header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100rem;
+}
+
+.header .header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50rem;
+}
+
+.header .menu__link {
+  position: relative;
+}
+
+.header .menu__link::after {
+  position: absolute;
+  content: "";
+  top: 5rem;
+  right: -20rem;
+  background-image: url(../images/icon-arrow-light.svg);
+  background-repeat: no-repeat;
+  height: 100%;
+  height: 15rem;
+  width: 12rem;
+}
+
+.header .sub-menu__list {
+  display: none;
+}
+
+.header .login__link {
+  margin-right: 20rem;
+}
+
+.header h1 {
+  font-size: 50rem;
+  margin-bottom: 15rem;
+}
+
+.header .header__sub-title {
+  color: #ffddcc;
+  margin-bottom: 45rem;
+  font-size: 18rem;
+}
+
+.header .btn {
+  display: inline-block;
+  padding: 10rem 15rem;
+  border-radius: 20rem;
+  color: var(--clr-lightRed);
+  font-family: var(--ff2-body);
+  font-weight: 700;
+  background: var(--clr-white);
+  border: 2px solid transparent;
+}
+
+.header .btn__sign {
+  padding-inline: 25rem;
+}
+
+.header .btn__start {
+  margin-right: 10rem;
+}
+
+.header .btn__more {
+  background: transparent;
+  color: var(--clr-white);
+  border: 1px solid var(--clr-white);
+}
+
+section {
+  margin-bottom: 50rem;
+}
